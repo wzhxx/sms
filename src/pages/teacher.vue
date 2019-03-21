@@ -144,7 +144,7 @@ export default {
     // 请求所有数据
     getAllData() {
       var _this = this
-      this.$http.get('/api/student').then(function (res) {
+      this.$http.get('/api/teacher').then(function (res) {
         console.log(res)
         _this.tableData = res.data
       })

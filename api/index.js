@@ -24,13 +24,13 @@ router.get("/student", (req, res) => {
 router.post("/addStudent", (req, res) => {
     //使用Student model上的create方法储存数据
     req.body.time = new Date().getTime()
-    Student.create(req.body, (err, student) => {
-        if (err) {
-            res.json(err);
-        } else {
-            res.json(student);
-        }
-    })
+    Student.create(req.body).then(data=>{
+		console.log("新增成功！")
+		res.json(data)
+	}).catch(err => {
+		console.log("新增失败！",err.message)
+		res.json(err.message)
+	})
 })
 
 // 删除一个学生
@@ -46,13 +46,12 @@ router.post("/delStudent", (req, res) => {
 router.post("/editStudent", (req, res) => {
     console.log(req.body)
 
-    Student.update({ _id: req.body._id }, req.body, (err, student) => {
-        if (err) {
-            res.json(err);
-        } else {
-            res.json(student);
-        }
-    })
+    Student.update({ _id: req.body._id }, req.body).then(data => {
+		res.json(data)
+	}).catch(err=>{
+		console.log("编辑失败！")
+		res.json(err.message)
+	})
 })
 
 

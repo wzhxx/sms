@@ -10,6 +10,10 @@ Vue.use(ElementUI);
 import axios from 'axios'
 Vue.prototype.$http= axios
 
+import animated from 'animate.css'
+
+Vue.use(animated)
+
 Vue.config.productionTip = false
 
 new Vue({

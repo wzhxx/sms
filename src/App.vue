@@ -1,15 +1,23 @@
 <template>
   <div id="app">
-    <Teacher></Teacher>
+    <About></About>
+	<Student> </Student>
+	<Teacher> </Teacher>
   </div>
 </template>
 
 <script>
 import Teacher from '@/pages/teacher'
+import Student from '@/pages/Index'
+import About from '@/pages/about'
+
 export default {
   name: 'app',
   components: {
-    Teacher
+    Teacher,
+		Student,
+		Teacher,
+		About
   }
 }
 </script>
@@ -21,6 +29,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
