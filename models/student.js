@@ -6,8 +6,8 @@ const studentSchema = mongoose.Schema({
   name :{type: String,required: true},
   sex : {type:String,required: true,unique:true,dropDups: true},
   age : {type: Number, default: 18},
-  moblie : {type: Number},
-  address : {type: String ,match:RegExp(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/)},
+  moblie : {type: String,match:RegExp(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/)},
+  address : {type: String },
 }, { collection: 'student'})
 
 

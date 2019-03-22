@@ -13,9 +13,11 @@
     "body-parser": "^1.18.3",
     "element-ui": "^2.4.8",
     "express": "^4.16.4",
+    "file-saver": "^2.0.1",
     "mongoose": "^5.3.4",
     "vue": "^2.5.17",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "xlsx": "^0.14.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.3",
